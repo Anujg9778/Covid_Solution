@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CovidSolutions</title>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!--<link href="css/button.scss" rel="stylesheet/scss" type="text/css"> -->
+
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/button.pug">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Covid19</title>
+</head>
+
+<body>
+   <div class="bgimg overflow-hidden">
+  <!-- <body data-spy="scroll" data-target=".navbar" data-offset="50"> -->
+    <nav class="navbar navbar-expand-md  py-1 ">
+
+      <!-- Brand -->
+      <a class="navbar-brand font-weight-bold " href="#" style="font-size: 2.5em;">COVID 19</a>
+
+
+      <!-- Toggler/collapsibe Button 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <button class = "navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+        <span class="navbar-toggler-icon"> </span>
+    </button>
+      <div class="navbar-collapse text-center" id="collapsenavbar">
+        <ui class="navbar-nav ml-auto py-3">
+            <li class="nav-item">
+                <a href="" class="nav-link text-white font-weight-bold">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link text-white font-weight-bold">GUIDELINES</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link text-white font-weight-bold">ABOUT COVID</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link text-white font-weight-bold">STATUS</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link text-white font-weight-bold">CONTACT</a>
+            </li>
+        </ui>
+    </div>
+      
+    </nav>
+    <br>
+    <div class="row">
+     
+      <div class="col-md-12 col-sm-12 col-xs-12 text-center"> <a href="c.html" class="btn btn-sm animated-button thar-four slide-in-elliptic-left-fwd">GET STARTED<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+      </svg></a> </div>
+    </div>
+    <h2 class="mid-text text-white font-weight-bold">STAY HOME <i class="fas fa-home"></i> STAY SAFE <i class="fas fa-user-shield"></i></h2>
+  </div>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/img5.jpg" alt="Los Angeles" width="100%" height="760px">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+<<<<<<< HEAD
+      </div>
+      <div class="carousel-item">
+        <img src="images/img6.jpg" alt="Chicago" width="100%" height="760px">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+=======
+      </nav>
+      <br>
+    
+    <button type="button" class="btn btn-primary btn-block"  href="#demo" >GET</button>
+    <br>
+<button type="button" class="btn btn-success btn-block">START</button>
+
+  <br>
+ <!-- Sliding Images -->
+
+ <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+  </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner" >
+        <div class="carousel-item active">
+          <img src="images/img5.jpg" alt="Los Angeles" width="100%" height="600px">
+          <div class="carousel-caption">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/img6.jpg" alt="Chicago" width="100%" height="600px">
+            <div class="carousel-caption">
+                <h3></h3>
+                <p></p>
+              </div>
+>>>>>>> 61feafbbd63b03d069d1da42c892d93817ef4a95
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/img7.jpg" alt="Chicago" width="100%" height="760px">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/img1.jpg" alt="New York" width="100%" height="760px">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+    <!--footer part -->
+    <div class="container py-5 overflow-hidden  ">
+      <div class="content">
+        <h6 style="padding-top: 1em;">© 2021 Copyright: <a href="#">COVID19.org</a></h6>
+        <div class="icon-container">
+          <div class="icon icon-fill">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <div class="icon icon-enter">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="icon icon-expand">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="icon icon-collapse">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="icon icon-rotate">
+            <a href="#"><i class="fa fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer part end -->
+
+
+    <!-- Footer -->
+  </body>
+
+</html>
