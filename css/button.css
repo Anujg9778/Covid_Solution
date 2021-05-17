@@ -1,5 +1,5 @@
 body {
-  background: #4d4d53;
+  background: #2d2c3e;
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,7 +12,7 @@ body {
   width: 100%;
   padding-bottom: 20px;
   margin: auto auto;
-  background: #4d4d53;
+  background: #2d2c3e;
   z-index: -1;
 }
 
@@ -109,13 +109,13 @@ h6 {
 
 .icon-expand::before {
   background: #C82647;
-  -webkit-box-shadow: inset 0 0 0 60px #4d4d53;
-          box-shadow: inset 0 0 0 60px #4d4d53;
+  -webkit-box-shadow: inset 0 0 0 60px #2d2c3e;
+          box-shadow: inset 0 0 0 60px #2d2c3e;
 }
 
 .icon-expand:hover::before {
-  -webkit-box-shadow: inset 0 0 0 1px #4d4d53;
-          box-shadow: inset 0 0 0 1px #4d4d53;
+  -webkit-box-shadow: inset 0 0 0 1px #2d2c3e;
+          box-shadow: inset 0 0 0 1px #2d2c3e;
 }
 
 .icon-collapse::before {
@@ -142,19 +142,15 @@ h6 {
 }
 
 .icon-rotate:hover::before {
-  -webkit-transition: border-top-width 0.3s ease,
- border-top-color 0.3s ease;
-  transition: border-top-width 0.3s ease,
- border-top-color 0.3s ease;
+  -webkit-transition: border-top-width 0.3s ease, border-top-color 0.3s ease;
+  transition: border-top-width 0.3s ease, border-top-color 0.3s ease;
   border-width: 60px;
   border-top-color: #7E3661;
 }
 
 .icon-rotate:hover::after {
-  -webkit-transition: border-left-width 0.3s ease,
- border-left-color 0.3s ease;
-  transition: border-left-width 0.3s ease,
- border-left-color 0.3s ease;
+  -webkit-transition: border-left-width 0.3s ease, border-left-color 0.3s ease;
+  transition: border-left-width 0.3s ease, border-left-color 0.3s ease;
   border-width: 60px;
   border-left-color: #7E3661;
 }
