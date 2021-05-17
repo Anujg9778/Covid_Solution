@@ -1,14 +1,22 @@
-const prompt = require("prompt");
-// program to check if the number is even or odd
-// take input from the user
-var number = prompt("Enter a number: ");
+var express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
 
-//check if the number is even
-if(number % 2 == 0) {
-    console.log("The number is even.");
-}
+var app = express();
+app.use(bodyParser());  //body-parser is used in order to access to the past data
 
-// if the number is odd
-else {
-    console.log("The number is odd.");
-}
+//initialize port number
+const PORT = process.env.PORT || 3000;
+
+
+const staticPath = path.join(__dirname, "./");
+
+//builtin middleware
+app.use(express.static(staticPath));
+app.get('/', (req,res) => {
+    res.render('index', { root: path.join(__dirname, './')});
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+  });
