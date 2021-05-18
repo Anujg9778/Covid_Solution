@@ -3,7 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 var app = express();
-app.use(bodyParser());  //body-parser is used in order to access to the past data
+app.use(bodyParser());  //body-parser is used in order to access to the post data
 
 //initialize port number
 const PORT = process.env.PORT || 3000;
