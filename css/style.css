@@ -164,8 +164,11 @@ a.animated-button.thar-four:before {
 }
 
 .mid-text{
-   padding-top: 220px;
+   padding-top: 230px;
    /* padding-left:5px; */
-   margin-left: 528px;
    /* padding-right: 15px; */
+}
+
+b1{
+  padding-top: 250px;
 }
