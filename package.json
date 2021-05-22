@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This our project  based on COVID solutions will provide by a website.",
   "main": "index.js",
-  "scripts": {
+    "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
