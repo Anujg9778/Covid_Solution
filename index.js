@@ -46,7 +46,7 @@ app.get('/getAPIResponse', async(req, res) => {
       
         
         res.render('index' , {WorldActive : result1["Active Cases_text"], WorldLastUpdate: result1['Last Update'], WorldNewCases: result1['New Cases_text'], WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
-        IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total  Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
+        IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
 })
 
 
