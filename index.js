@@ -38,34 +38,17 @@ app.get('/guidelines.hbs', (req,res) => {
 app.get('/about.hbs', (req,res) => {
     res.render('about');
 });
-app.get('/getAPIResponse', (req, res) => {
-    api_helper.make_API_call('https://corona.lmao.ninja/v2/all?yesterday=')
-    .then(response => {
-        let x1 = response.cases;
-        let x2 = response.deaths;
-        let x3 = response.active;
-        let x4 = response.recovered;
-        let x5 = response.tests;
-        console.log(response);
-        res.render('index' , {d1:x1, d2:x2, d3:x3, d4:x4, d5:x5})
-
-    })
-    .catch(error => {
-        console.log('Error')
-    })
+app.get('/getAPIResponse', async(req, res) => {
+        var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
+        console.log(result1);
+        var result2 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/India');
+        console.log(result2);
+      
+        
+        res.render('index' , {WorldActive : result1["Active Cases_text"], WorldLastUpdate: result1['Last Update'], WorldNewCases: result1['New Cases_text'], WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
+        IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total  Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
 })
 
-app.get('/getAPIResponse1', (req, res) => {
-    api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/India')
-    .then(response => {
-        let  x11 = response.Last_Update
-        console.log(response);
-        res.render('index' ,{d11:x11});
-    })
-    .catch(error => {
-        console.log('Error')
-    })
-})
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
