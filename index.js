@@ -26,6 +26,14 @@ app.use(express.static(staticPath));
 app.get('/', (req,res) => {
     res.render('index');
 });
+app.get('/guidelines.hbs', (req,res) => {
+    res.render('guidelines');
+});
+
+
+app.get('/Form.hbs', (req,res) => {
+    res.render('Form');
+});
 
 app.get('/getAPIResponse', (req, res) => {
     api_helper.make_API_call('https://corona.lmao.ninja/v2/all?yesterday=')
