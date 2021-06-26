@@ -37,13 +37,6 @@
 </head>
 
 <body>
-   <script>
-     var d = {{{data}}}
-    document.getElementById("a").innerText =   d.activePerOneMillion
-    
-    console.log(typeof(d), d.activePerOneMillion, d)
-   </script>
-   <h1 id="a">{{d}}</h1>
    <div class="bgimg overflow-hidden">
   <!-- <body data-spy="scroll" data-target=".navbar" data-offset="50"> -->
     <nav class="navbar navbar-expand-md  py-1 ">
@@ -63,10 +56,10 @@
                 <a href="guidelines.hbs" class="nav-link text-white font-weight-bold">GUIDELINES</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link text-white font-weight-bold">ABOUT</a>
+                <a href="about.hbs" class="nav-link text-white font-weight-bold">ABOUT</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link text-white font-weight-bold">STATUS</a>
+                <a href="getAPIResponse" class="nav-link text-white font-weight-bold">STATUS</a>
             </li>
             <li class="nav-item">
                 <a href="" class="nav-link text-white font-weight-bold">HELP</a>
@@ -159,16 +152,28 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>  
+</div> 
+
+<!-- Covid Status !-->
 <div class="status py-3">
   <div class="container">
     <h1 class="head text-center bg-success text-white">COVID'19 STATUS</h1>
     <div class="row p-md-3 px-md-1">
       <div class="  col-md-6" style="background-color:yellow; height: 400px;">
-      <p class="text-center font-weight-bold">IN WORLD</p>
+      <p class="in_world text-center font-weight-bold">WORLD</p>
+      <p class="world_status text-center">Total Cases: {{d1}} </p>
+      <p class="world_status text-center">Total Deaths: {{d2}} </p>
+      <p class="world_status text-center">Total Active: {{d3}} </p>
+      <p class="world_status text-center">Total Recovered: {{d4}} </p>
+      <p class="world_status text-center">Total Tests: {{d5}} </p>
       </div>
-      <div class=" col-md-6" style="background-color:rgb(241, 129, 148); height: 400px;">
-        <p class='text-center font-weight-bold'>IN INDIA</p>
+      <div class=" col-md-6" style="background-color:rgb(128, 134, 253); height: 400px;">
+        <p class='in_india text-center font-weight-bold'>IN INDIA</p>
+        <p class="world_status text-center">Total Cases: {{d11}} </p>
+        <p class="world_status text-center">Total Deaths: {{d2}} </p>
+        <p class="world_status text-center">Total Active: {{d3}} </p>
+        <p class="world_status text-center">Total Recovered: {{d4}} </p>
+        <p class="world_status text-center">Total Tests: {{d5}} </p>
       </div>
     </div>
   </div>

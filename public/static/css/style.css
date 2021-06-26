@@ -281,3 +281,14 @@ box for covid status */
   background-color:rgb(230, 217, 227);
 
 }
+
+.in_world{
+  font-size: 40px;
+}
+.in_india{
+  font-size: 40px;
+}
+
+.world_status{
+  font-size: 30px;
+}
