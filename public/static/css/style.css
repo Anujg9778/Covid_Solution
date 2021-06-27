@@ -281,7 +281,7 @@ input.submitbutton.ripplelink {
 
 /* 
 box for covid status */
-.status{
+#status{
   background-color:rgb(230, 217, 227);
 
 }
