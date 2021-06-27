@@ -31,14 +31,18 @@ app.get('/', (req,res) => {
     res.render('index');
 });
 
-app.get('/guidelines.hbs', (req,res) => {
+app.get('/home', (req,res) => {
+    res.render('index');
+});
+
+app.get('/guidelines', (req,res) => {
     res.render('guidelines');
 });
 
-app.get('/about.hbs', (req,res) => {
+app.get('/about', (req,res) => {
     res.render('about');
 });
-app.get('/getAPIResponse', async(req, res) => {
+app.get('/status', async(req, res) => {
         var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
         console.log(result1);
         var result2 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/India');

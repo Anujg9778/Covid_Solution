@@ -39,38 +39,7 @@
 <body>
    <div class="bgimg overflow-hidden">
   <!-- <body data-spy="scroll" data-target=".navbar" data-offset="50"> -->
-    <nav class="navbar navbar-expand-md  py-1 ">
-
-      <!-- Brand -->
-      <a class="navbar-brand font-weight-bold " href="#" style="font-size: 2.5em;">COVID 19</a>
-
-      <button class = "navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
-        <span class="navbar-toggler-icon"> </span>
-      </button>
-      <div class="navbar-collapse text-center text-white" id="collapsenavbar">
-        <ui class="navbar-nav ml-auto py-3">
-            <li class="nav-item">
-                <a href="" class="nav-link text-white font-weight-bold">HOME</a>
-            </li>
-            <li class="nav-item">
-                <a href="guidelines.hbs" class="nav-link text-white font-weight-bold">GUIDELINES</a>
-            </li>
-            <li class="nav-item">
-                <a href="about.hbs" class="nav-link text-white font-weight-bold">ABOUT</a>
-            </li>
-            <li class="nav-item">
-                <a href="getAPIResponse" class="nav-link text-white font-weight-bold">STATUS</a>
-            </li>
-            <li class="nav-item">
-                <a href="" class="nav-link text-white font-weight-bold">HELP</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://zxpagcfxuab.typeform.com/to/g9gt1jAS" class="nav-link text-white font-weight-bold">CONTACT</a>
-            </li>
-        </ui>
-    </div>
-      
-    </nav>
+   {{>header}}
     <br>
     <!-- GET STARTED BUTTON -->
     <div class="row">
@@ -84,7 +53,7 @@
   </div>
 
   <!-- Sliding Image Start -->
-  <div id="demo" class="carousel slide" data-ride="carousel">
+  <div id="demo" class="carousel slide py-0" data-ride="carousel">
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
@@ -155,8 +124,8 @@
 </div> 
 
 <!-- Covid Status !-->
-<div class="status py-3">
-  <div class="container">
+<div class="status">
+  <div class="container py-2">
     <h1 class="head text-center bg-success text-white">COVID'19 STATUS</h1>
     <div class="row p-md-3 px-md-1">
       <div class="  col-md-6" style="background-color:yellow; height: 400px;">
@@ -183,74 +152,7 @@
 
 
 <!-- Footer Start -->
-<div class="footer">
-  <footer id="footer" class="footer-1">
-  <div class="main-footer widgets-dark typo-light">
-  <div class="container">
-  <div class="row">
-  
-    <div class="col-xs-12 col-sm-6 col-md-3">
-  <div class="widget subscribe no-box">
-  <h5 class="widget-title">ABOUT <span></span></h5>
-  <p>little description will be here </p>
-  </div>
-  </div>
-  
-    
-  <div class="col-xs-12 col-sm-6 col-md-3">
-  <div class="widget no-box">
-  <h5 class="widget-title">Reference Links<span></span></h5>
-  <ul class="thumbnail-widget">
-  <li>
-  <div class="thumb-content"><a href="#.">&nbsp;LINK 1</a></div> 
-  </li>
-  <li>
-  <div class="thumb-content"><a href="#.">&nbsp;LINK 2</a></div> 
-  </li>
-  <li>
-  </ul>
-  </div>
-  </div>
-
-  <div class="col-xs-12 col-sm-6 col-md-3">
-  <div class="widget no-box">
-  <h5 class="widget-title">Follow up<span></span></h5>
-              <a href="#"> <i class="fa fa-facebook"> </i> </a>
-              <a href="#"> <i class="fa fa-twitter"> </i> </a>
-              <a href="#"> <i class="fa fa-youtube"> </i> </a>
-              <a href="#"> <i class="fa fa-linkedin-in"></i></a>
-  </div>
-  </div>
-  <br>
-    <br>
-  <div class="col-xs-12 col-sm-6 col-md-3">
-  <div class="widget no-box">
-  <h5 class="widget-title">Contact Us<span></span></h5>
-              <p>Subscribe to our Newsletter</p>
-    <div class="emailfield">
-  <input type="text" name="email" value="Email">
-  <input name="uri" type="hidden" value="arabiantheme">
-  <input name="loc" type="hidden" value="en_US">
-  <input class="submitbutton ripplelink" type="submit" value="Subscribe">
-  </form>  
-  </div>
-  </div>
-  
-  </div>
-  </div>
-  </div>
-    
-  <div class="footer-copyright">
-  <div class="container">
-  <div class="row">
-  <div class="col-md-12 text-center">
-  <p>© 2020 Copyright: <a href="#">Covid19.org</a> </p>
-  </div>
-  </div>
-  </div>
-  </div>
-  </footer>
-</div>  
+{{>footer}}
 <!-- End of footer -->
   </body>
 

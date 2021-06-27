@@ -1,3 +1,7 @@
+*{
+  padding: 1px;
+  
+}
 .bgimg{
   background-image: url('/static/images/img.jpg');
   background-size: 100% 100%;
@@ -190,11 +194,11 @@ footer.light .footer-copyright{ background: none repeat scroll 0 0 rgba(255, 255
 .widget-title.text-center span,.widget-title.text-center span::after {margin-left: auto;margin-right:auto;left: 0;right: 0;}
 .widget .badge{ float: right; background: #7f7f7f;}
 
-.typo-light h1, 
-.typo-light h2, 
-.typo-light h3, 
-.typo-light h4, 
-.typo-light h5, 
+.typo-light h1,
+.typo-light h2,
+.typo-light h3,
+.typo-light h4,
+.typo-light h5,
 .typo-light h6,
 .typo-light p,
 .typo-light div,
@@ -291,4 +295,14 @@ box for covid status */
 
 .world_status{
   font-size: 22px;
+}
+
+/* Sliding image */
+@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
+  div.carousel-item {
+    font-size: 50px;
+    /* padding: 50px;
+   border: 8px solid black; */
+    background: yellow;
+  }
 }
