@@ -39,8 +39,26 @@ app.get('/guidelines', (req,res) => {
     res.render('guidelines');
 });
 
-app.get('/about', (req,res) => {
-    res.render('about');
+app.get('/aboutcovid', (req,res) => {
+    res.render('aboutcovid');
+});
+app.get('/content', (req,res) => {
+    res.render('content');
+});
+app.get('/tile', (req,res) => {
+    res.render('tile');
+});
+app.get('/covidtile', (req,res) => {
+    res.render('covidtile');
+});
+app.get('/helpsection', (req,res) => {
+    res.render('helpsection');
+});
+app.get('/vaccine', (req,res) => {
+    res.render('vaccine');
+});
+app.get('/fungus', (req,res) => {
+    res.render('fungus');
 });
 app.get('/home', async(req, res) => {
         var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
