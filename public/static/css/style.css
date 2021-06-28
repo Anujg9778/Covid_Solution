@@ -2,7 +2,7 @@
   padding: 1px;
 }
 .bgimg{
-  background-image: url('/static/images/img.jpg');
+  background-image: url('/static/images/pic1.jpg');
   background-size: 100% 100%;
   background-attachment: fixed;
   width:100%;
