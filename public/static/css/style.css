@@ -11,7 +11,7 @@
 }
 
 .navbar {
-    background-color: #062f7a;
+    /* background-color: #062f7a; */
     overflow: hidden;
   }
   
@@ -27,13 +27,13 @@
   }
   
   /* Change the color of links on hover */
-  .navbar a:hover {
+  .navbar-nav a:hover {
     background-color: rgb(32, 30, 30);
     color: #ffffff;
   }
   
   /* Add an active class to highlight the current page */
-  .navbar a.active {
+  .navbar-nav a.active {
     background-color: #a6b3ae;
     color: white;
   }
