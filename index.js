@@ -36,6 +36,9 @@ app.get('/guidelines', (req,res) => {
     res.render('guidelines');
 });
 
+app.get('/commentbox', (req,res) => {
+    res.render('commentbox');
+});
 
 app.get('/aboutcovid', (req,res) => {
     res.render('aboutcovid');
