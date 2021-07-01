@@ -28,6 +28,43 @@ hbs.registerPartials(partialspath);
 app.use(express.static(staticPath));
 //app.use(express.static("./public/static/css/"));
 
+// app.get('/', (req,res) => {
+//     res.render('index');
+// });
+
+app.get('/guidelines', (req,res) => {
+    res.render('guidelines');
+});
+
+
+app.get('/aboutcovid', (req,res) => {
+    res.render('aboutcovid');
+});
+
+app.get('/content', (req,res) => {
+    res.render('content');
+});
+
+app.get('/tile', (req,res) => {
+    res.render('tile');
+});
+
+app.get('/new', (req,res) => {
+    res.render('new');
+});
+
+app.get('/helpsection', (req,res) => {
+    res.render('helpsection');
+});
+
+app.get('/vaccine', (req,res) => {
+    res.render('vaccine');
+});
+
+app.get('/fungus', (req,res) => {
+    res.render('fungus');
+});
+
 app.get('/', async(req,res) => {
     var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
     console.log(result1);
@@ -35,36 +72,7 @@ app.get('/', async(req,res) => {
     console.log(result2);
     res.render('index' , {WorldActive : result1["Active Cases_text"], WorldLastUpdate: result1['Last Update'], WorldNewCases: result1['New Cases_text'], WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
     IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
-});
-
-app.get('/aboutcovid#status', async(req,res) => {
-    var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
-    console.log(result1);
-    var result2 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/India');
-    console.log(result2);
-    res.render('index' , {WorldActive : result1["Active Cases_text"], WorldLastUpdate: result1['Last Update'], WorldNewCases: result1['New Cases_text'], WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
-    IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
-});
-app.get('/guidelines/#status', async(req,res) => {
-    var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
-    console.log(result1);
-    var result2 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/India');
-    console.log(result2);
-    res.render('index' , {WorldActive : result1["Active Cases_text"], WorldLastUpdate: result1['Last Update'], WorldNewCases: result1['New Cases_text'], WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
-    IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
-});
-
-app.get('/guidelines', (req,res) => {
-    res.render('guidelines');
-});
-
-app.get('/aboutcovid', (req,res) => {
-    res.render('about');
-});
-
-app.get('/guidelines', (req,res) => {
-    res.render('guidelines');
-});
+})
 
 app.get('/home', async(req, res) => {
         var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
