@@ -11,13 +11,54 @@ app.set('view engine', 'hbs')
 app.set('views', "./public/view/")
 
 
+//initialize port number
+const port = process.env.PORT || 4000;
+
+app.use(express.static('public/static/js'))
+
+// connection with the database
+
+require('./db')()
+
+// Mongoose Schema
+
+const Comment = require('./models/comments')
+
+// Setting Up express To allow JSON based data on routes
+
+app.use(express.json())
+
+// Routes 
+
+// to save comments
+
+app.get('/comment', (req,res) => {
+    res.render('letshelpeachother');
+});
+
+app.post('/api/comments', (req, res) => {
+    const comment = new Comment({
+        username: req.body.username,
+        comment: req.body.comment
+    })
+    comment.save().then(response => {
+        res.send(response)
+    })
+
+});
+
+// to retrive comments
+
+app.get('/api/comments', (req, res) => {
+    Comment.find().then(function(comments) {
+        res.send(comments)
+    })
+});
+
 // REST URL : https://covid-19.dataflowkit.com
 // https://covid-19.dataflowkit.com/v1/India
 
 app.use(bodyParser());  //body-parser is used in order to access to the post data
-
-//initialize port number
-const PORT = process.env.PORT || 3000;
 
 const partialspath = path.join(__dirname, "/public/partials");
 const staticPath = path.join(__dirname, "/public");
@@ -90,9 +131,7 @@ app.get('/home', async(req, res) => {
         var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
         console.log(result1);
         var result2 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/India');
-        console.log(result2);
-      
-        
+        console.log(result2)
         res.render('index' , {WorldActive : result1["Active Cases_text"], WorldLastUpdate: result1['Last Update'], WorldNewCases: result1['New Cases_text'], WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
         IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
 })
@@ -129,7 +168,7 @@ app.post('/subscribe', (req,res) => {
     });
     var file = []
     var trigger = false
-     fs.readFile('\recordData.json', 'utf8', function (err, data){
+     fs.readFile('/recordData.json', 'utf8', function (err, data){
         if (err) {
             console.log(err)
         } else {
@@ -139,7 +178,7 @@ app.post('/subscribe', (req,res) => {
                 {
                     file = [];
                 }
-                else
+            else
                 {
                     file = JSON.parse(data);
                     for(var i =0;i<file.length;i++)
@@ -171,6 +210,30 @@ app.post('/subscribe', (req,res) => {
 });
 
 
-app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
+ const server = app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
   });
+
+  let io = require('socket.io')(server);
+
+  io.on('connection', (socket) => {
+     
+      // this function will be fired whenever a socket (browser tab) gets connected.
+      
+      // we are receiving a object named 'socket' which is an instance of connected client
+      
+      socket.on('comment', (data) => {
+           
+           // this will be fired whenever a 'comment' event gets fired.
+           
+           // getting current timestamp
+           
+           data.time = Date()
+           
+           // sending back an event to all other clients named 'comment', which we are already listening in client side
+           
+           socket.broadcast.emit('comment', data)
+       
+       })
+      
+});
