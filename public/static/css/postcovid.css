@@ -25,7 +25,6 @@ width:50%;
 background-position:center;
 background-repeat:no-repeat;
 background-size:cover;
-
 }
 .section-container .columns.content .content-container
 {
@@ -33,7 +32,7 @@ padding:40px 50px;
 }
 .section-container .columns.content .content-container h5
 {
-color: darkorchid;
+color: brown;    
 font-weight:700;
 font-size:25px;
 margin-bottom:20px;
@@ -70,7 +69,7 @@ padding:20px 35px;
 }
 .section-container .columns.content .content-container h5
 {
-    color: darkorchid;
+    color: brown ;
     margin-bottom:5px;
 }
 .section-container .columns.content .content-container h1
@@ -82,46 +81,3 @@ padding:20px 35px;
 }
 
 }
-
-.btn1 {
-    box-sizing: border-box;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    background-color:#f0f352;
-    border: 2px solid #121213;
-    border-radius: 0.6em;
-    color: #121213;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1;
-    margin: 20px;
-    padding: 1.2em 2.8em;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    width: 200px;
-    margin-left: 250px;
-  }
-  .btn1:hover, .btn1:focus {
-    color: rgb(26, 24, 24);
-    outline: 0;
-  }
-  
-  .bt1 {
-    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  }
-  .btn1:hover {
-    box-shadow: 0 0 40px 40px #f2f530 inset;
-  }

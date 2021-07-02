@@ -85,13 +85,13 @@ a.quicklink.link2 .ql_bottom {
 
 
 a.quicklink.link3 .ql_top {
-    border-bottom-color: #bcbdc0;
+    border-bottom-color: #8a0273;
 }
 a.quicklink.link3 .ql_bottom {
-    border-top-color: #bcbdc0;
+    border-top-color: #8a0273;
 }
 a.quicklink.link3 {
-    background: #bcbdc0;
+    background: #8a0273;
 }
 a.quicklink {
     font-size: 36px;
@@ -171,4 +171,10 @@ a.quicklink {
   height: 167.4316px;
   z-index: 2;
   background: inherit;
+}
+.container{
+    margin-top: 140px;
+}
+.about{
+    text-align: center;
 }

@@ -112,6 +112,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', end
 
 }
 
+
+
+.quotes .box.box3:hover,
+.quotes .box.box3:hover~.bg {
+  opacity: 1;
+  background: #dc61e2;
+background: -moz-linear-gradient(-45deg, #B8B5FF 15%, #B088F9 100%);
+background: -webkit-linear-gradient(-45deg, #B8B5FF 15%,#B088F9 100%);
+background: linear-gradient(135deg, #B8B5FF  15%,#B088F9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
+}
+
 .btn1 {
   font: bold 11px Arial;
   text-decoration: none;

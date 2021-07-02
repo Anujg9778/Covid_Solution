@@ -67,6 +67,15 @@ app.get('/vaccine', (req,res) => {
 app.get('/fungus', (req,res) => {
     res.render('fungus');
 });
+app.get('/mentalhelporg', (req,res) => {
+    res.render('mentalhelporg');
+});
+app.get('/org', (req,res) => {
+    res.render('org');
+});
+app.get('/postcovid', (req,res) => {
+    res.render('postcovid');
+});
 
 app.get('/', async(req,res) => {
     var result1 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/world');
