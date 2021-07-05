@@ -23,6 +23,7 @@ require('./db')()
 // Mongoose Schema
 
 const Comment = require('./models/comments')
+const YourSpace = require('./models/YourSpace')
 
 // Setting Up express To allow JSON based data on routes
 
@@ -34,6 +35,10 @@ app.use(express.json())
 
 app.get('/comment', (req,res) => {
     res.render('letshelpeachother');
+});
+
+app.get('/YourSpace', (req,res) => {
+    res.render('YourSpace');
 });
 
 app.post('/api/comments', (req, res) => {
@@ -50,6 +55,27 @@ app.post('/api/comments', (req, res) => {
 // to retrive comments
 
 app.get('/api/comments', (req, res) => {
+    Comment.find().then(function(comments) {
+        res.send(comments)
+    })
+});
+
+// YourSpace
+
+app.post('/api/YourSpace', (req, res) => {
+    const comment = new Comment({
+        username: req.body.username,
+        comment: req.body.comment
+    })
+    comment.save().then(response => {
+        res.send(response)
+    })
+
+});
+
+// to retrive comments
+
+app.get('/api/YourSpace', (req, res) => {
     Comment.find().then(function(comments) {
         res.send(comments)
     })
