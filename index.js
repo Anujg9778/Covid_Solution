@@ -127,6 +127,11 @@ app.get('/helpsection', (req,res) => {
     res.render('helpsection');
 });
 
+app.get('/space', (req,res) => {
+    res.render('space');
+});
+
+
 app.get('/vaccine', (req,res) => {
     res.render('vaccine');
 });
