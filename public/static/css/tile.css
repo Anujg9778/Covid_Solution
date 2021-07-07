@@ -26,12 +26,14 @@ body{
     margin: 10px;
     box-sizing: border-box;
     display: inline-block;
+    border-radius: 30px;
 
 }
 
 .container .box .imgBox{
     position: relative;
     overflow: hidden;
+    border-radius: 30px;
 
 }
 .container .box .imgBox img{
