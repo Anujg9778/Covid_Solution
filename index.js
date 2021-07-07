@@ -13,6 +13,7 @@ app.set('views', "./public/view/")
 
 //initialize port number
 const port = process.env.PORT || 4000;
+const uri = process.env.MONGODB_URI;
 
 app.use(express.static('public/static/js'))
 
