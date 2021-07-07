@@ -144,10 +144,12 @@ app.get('/vaccine', (req,res) => {
 app.get('/fungus', (req,res) => {
     res.render('fungus');
 });
-
-
 app.get('/mentalhelporg', (req,res) => {
     res.render('mentalhelporg');
+});
+
+app.get('/statehospital', (req,res) => {
+    res.render('statehospital');
 });
 app.get('/org', (req,res) => {
     res.render('org');
