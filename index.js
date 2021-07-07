@@ -41,6 +41,10 @@ app.get('/YourSpace', (req,res) => {
     res.render('YourSpace');
 });
 
+app.get('/hospitals', (req,res) => {
+    res.render('hospital');
+});
+
 app.post('/api/comments', (req, res) => {
     const comment = new Comment({
         username: req.body.username,
