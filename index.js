@@ -143,6 +143,8 @@ app.get('/vaccine', (req,res) => {
 app.get('/fungus', (req,res) => {
     res.render('fungus');
 });
+
+
 app.get('/mentalhelporg', (req,res) => {
     res.render('mentalhelporg');
 });
