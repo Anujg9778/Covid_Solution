@@ -39,7 +39,7 @@ app.get('/comment', (req,res) => {
 });
 
 app.get('/YourSpace', (req,res) => {
-    res.render('YourSpace');
+    res.render('yourspace');
 });
 
 app.get('/hospitals', (req,res) => {
