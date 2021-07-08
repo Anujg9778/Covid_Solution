@@ -2,6 +2,7 @@ function dbConnect() {
     // Db connection
 const mongoose = require('mongoose')
 const url = 'mongodb://localhost/comments'
+const url2 = 'mongodb://localhost/YourSpace'
 
 mongoose.connect(url, {
     userNewUrlParser: true,
@@ -9,11 +10,11 @@ mongoose.connect(url, {
     useFindAndModify: true
 })
 
-mongoose.connect(url, {
-    userNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: true
-})
+// mongoose.connect(url2, {
+//     userNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useFindAndModify: true
+// })
 
 const connection = mongoose.connection
 connection.once('open', function() {
