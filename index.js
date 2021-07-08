@@ -164,7 +164,7 @@ app.get('/', async(req,res) => {
     var result2 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/India');
     console.log(result2);
     var result3 = await api_helper.make_API_call('https://corona.lmao.ninja/v2/all?yesterday');
-    res.render('index' , {WorldActive : result3["active"], WorldLastUpdate: result1['Last Update'], WorldNewCases: result1['New Cases_text'], WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
+    res.render('index' , {WorldActive : result3["active"], WorldLastUpdate: result1['Last Update'],  WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
     IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
 })
 
@@ -173,7 +173,7 @@ app.get('/home', async(req, res) => {
         console.log(result1);
         var result2 = await api_helper.make_API_call('https://covid-19.dataflowkit.com/v1/India');
         console.log(result2)
-        res.render('index' , {WorldActive : result1["Active Cases_text"], WorldLastUpdate: result1['Last Update'], WorldNewCases: result1['New Cases_text'], WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
+        res.render('index' , {WorldActive : result1["Active Cases_text"], WorldLastUpdate: result1['Last Update'],  WorldTotalCases: result1['Total Cases_text'], WorldTotalDeaths: result1['Total Deaths_text'], WorldRecoveredCases: result1['Total Recovered_text'],
         IndiaActive : result2["Active Cases_text"], IndiaLastUpdate: result2['Last Update'], IndiaNewCases: result2['New Cases_text'], IndiaTotalCases: result2['Total Cases_text'], IndiaTotalDeaths: result2['Total Deaths_text'], IndiaRecoveredCases: result2['Total Recovered_text']    })
 })
 
