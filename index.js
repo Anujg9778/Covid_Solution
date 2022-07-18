@@ -188,7 +188,7 @@ app.post('/subscribe', (req,res) => {
         secure: true,
         auth:{
             user: 'anmolgupta20715@gmail.com', //user mail who handle the server
-            pass:'Anmolg@1411'
+            pass:'your password'
         }
     });
 
